@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Supermercado",
+      "amount": 2,
+      "budget": 1000.0,
+      "available": 884.35,
+      "total": 115.65
+    },
+    {
+      "id": 2,
+      "title": "Açougue",
+      "amount": 1,
+      "budget": 500.0,
+      "available": 470.0,
+      "total": 30.0
+    },
+    {
+      "id": 3,
+      "title": "Sacolão",
+      "amount": 5,
+      "budget": 1000.0,
+      "available": 370.0,
+      "total": 30.0
+    }
+  ]
+}

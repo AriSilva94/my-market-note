@@ -1,0 +1,53 @@
+hr {
+  border: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b6c4b6;
+}
+
+h2 {
+  font-size: 24px !important;
+}
+
+.container {
+  margin-top: 24px;
+  padding: 16px 0;
+  background-color: #fff;
+  width: 95%;
+  border: 1x #dddddd solid;
+  border-radius: 8px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 40px;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.content {
+  > p {
+    color: #000;
+    font-weight: 500;
+  }
+}
+
+.products {
+  > span {
+    color: #304d30;
+    font-weight: 600;
+  }
+}

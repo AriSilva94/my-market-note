@@ -1,0 +1,16 @@
+body {
+  background-color: #eef0e5;
+  font-family: "Inter";
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

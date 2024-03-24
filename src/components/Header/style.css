@@ -1,0 +1,30 @@
+header {
+  background-color: #163020;
+}
+
+h3,
+span {
+  color: #fff;
+}
+
+h3 {
+  font-size: 24px !important;
+}
+
+.container-header {
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
