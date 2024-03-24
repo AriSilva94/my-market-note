@@ -16,20 +16,21 @@ h2 {
   width: 95%;
   border: 1x #dddddd solid;
   border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 40px;
+  padding: 8px 0;
 }
 
 .card-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 16px 24px;
 }
 
 .content {

@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "places": [
     {
       "id": 1,
       "title": "Supermercado",
@@ -23,6 +23,29 @@
       "budget": 1000.0,
       "available": 370.0,
       "total": 30.0
+    }
+  ],
+  "foods": [
+    {
+      "id": 1,
+      "title": "Arroz",
+      "amount": 2,
+      "value": 10.0,
+      "total": 115.65
+    },
+    {
+      "id": 2,
+      "title": "Feijão",
+      "amount": 2,
+      "value": 10.0,
+      "total": 115.65
+    },
+    {
+      "id": 3,
+      "title": "Macarrão",
+      "amount": 2,
+      "value": 10.0,
+      "total": 115.65
     }
   ]
 }
