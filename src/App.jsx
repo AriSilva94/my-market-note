@@ -5,12 +5,14 @@ import Header from "./components/Header";
 import { IoAddCircle } from "react-icons/io5";
 
 function App() {
-  const [isCard, setIsCard] = useState(true);
+  const [isCard, setIsCard] = useState(null);
+  const [isCardDetails, setIsCardDetails] = useState(false);
+  const [titleModal, setTitleModal] = useState(null);
+  const [budget, setBudget] = useState(0);
   const [categoryItems, setCategoryItems] = useState([]);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    setIsCard(true);
     getData();
   }, []);
 
@@ -38,13 +40,41 @@ function App() {
       .catch((error) => console.log("error", error));
   };
 
+  const handleOpenCard = (title, budget) => {
+    setTitleModal(title);
+    setBudget(budget);
+    setIsCard(true);
+    setIsCardDetails(false);
+  };
+
+  const handleCloseCard = () => {
+    setIsCard(false);
+    setTitleModal("Lista de compras");
+  };
+
+  const handleOpenCardDetails = () => {
+    setIsCardDetails(true);
+  };
+
+  const handleCloseCardDetails = () => {
+    setIsCardDetails(false);
+  };
+
   return (
     <>
       <div className="App">
-        <Header />
-        {isCard ? (
+        <Header {...{ titleModal, isCard, budget, handleCloseCard }} />
+        {!isCard ? (
           <div className="card">
-            <PurchaseCategoryList {...{ categoryItems }} />
+            <PurchaseCategoryList
+              {...{
+                categoryItems,
+                handleOpenCard,
+                isCardDetails,
+                handleOpenCardDetails,
+                handleCloseCardDetails,
+              }}
+            />
           </div>
         ) : (
           <div className="">

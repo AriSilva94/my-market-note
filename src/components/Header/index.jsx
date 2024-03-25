@@ -1,14 +1,34 @@
 import React from "react";
 import "./style.css";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FaArrowLeft } from "react-icons/fa";
 
-const index = () => {
+const index = ({ titleModal, isCard, budget, handleCloseCard }) => {
   return (
     <header className="container-header">
       <div className="header-items">
-        <RxHamburgerMenu style={{ color: "#fff", fontSize: "2em" }} />
-        <h3>Lista de compras</h3>
-        <span>{new Date().toLocaleDateString("pt-br")}</span>
+        {isCard ? (
+          <FaArrowLeft
+            onClick={handleCloseCard}
+            style={{ color: "#fff", fontSize: "2em" }}
+          />
+        ) : (
+          <RxHamburgerMenu style={{ color: "#fff", fontSize: "2em" }} />
+        )}
+
+        <h3>{titleModal}</h3>
+        <span>
+          {isCard ? (
+            <>
+              {budget.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </>
+          ) : (
+            <>{new Date().toLocaleDateString("pt-br")}</>
+          )}
+        </span>
       </div>
     </header>
   );

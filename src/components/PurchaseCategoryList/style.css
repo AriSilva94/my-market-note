@@ -10,7 +10,8 @@ h2 {
 }
 
 .container {
-  margin-top: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   padding: 16px 0;
   background-color: #fff;
   width: 95%;
@@ -19,24 +20,53 @@ h2 {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.container {
+  > button {
+    background: transparent;
+    width: 100%;
+    border: none;
+  }
+}
+
 .card-header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 8px 0;
 }
 
+.card-details {
+  z-index: 99;
+  position: absolute;
+  right: -8px;
+  top: 36px;
+  width: 100px;
+  background-color: #fff;
+  border: 1x #dddddd solid;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  > p {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .card-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 16px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  justify-content: start;
+  align-items: start;
 }
 
 .content {
